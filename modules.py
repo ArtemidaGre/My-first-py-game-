@@ -42,7 +42,6 @@ class Game():
             print("♂fuck you♂") 
     def battle(hp, damage, ehp, edamage):
         start_hp=hp
-        global win
         import time as t
         print('Бой начинается!')
         print('у вас', hp, 'hp, и', damage, 'урона\nу врага', ehp, 'hp, и', edamage, 'урона')
@@ -69,6 +68,7 @@ class Game():
                 elif luck2<=40:
                     print('враг промахнулся')
                     t.sleep(0.3)
+        global win
         if hp<=0:
             win=0
             print('вы проиграли!!!')
