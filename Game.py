@@ -27,7 +27,7 @@ if pereennie==1:
         print("включен Debug")
     elif name != "Debug":
         DebugMode=0
-    win = 0
+    win = 1
     gun=0
     elecrik=1
     artefact=0
