@@ -32,7 +32,7 @@ if pereennie==1:
     elecrik=1
     artefact=0
     artefactp=0
-    p1, p2, p3=0
+    p1=p2=p3=0
 print('Добро пожаловать в симулятор квеста!')
 print("Начинаем игру")
 print("перед вами мальчик лет 11, у него в руке нож!")
@@ -61,6 +61,8 @@ if choise1 == "да":
         hp=hp+6
     if p3==1:
         damage=damage+11
+    if DebugMode==1:
+        print(hp, damage)
 elif choise1 != "да":
     print("Вы проходите мимо")
 print("Вы купили себе вещи, вот ваши характеристики-", hp, "hp, ",damage, "Урона." )
