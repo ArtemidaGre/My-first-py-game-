@@ -32,11 +32,52 @@ if pereennie==1:
     elecrik=1
     artefact=0
     artefactp=0
-    p1=p2=p3=0
+    global itp1, itp2, itp3
+    itp1=itp2=itp3=0
+    
 print('Добро пожаловать в симулятор квеста!')
 print("Начинаем игру")
 print("перед вами мальчик лет 11, у него в руке нож!")
 choise1 = str(input("Начать бой? (да или нет)\n>>>"))
+
+
+def magazine(i1, i2, i3, c1, c2, c3):
+        a1=a2=a3=0
+        global itp1, itp2, itp3, coins
+        #i know, that is stupid to add sub per. for sub per, but i do!
+        m_circle=1
+        print("Вы заходите в магазин")
+        while m_circle==1 or m_circle=='да' or m_circle=='Да':
+            print('Вы можете купить несколько предметов:\n1.', i1, 'за', c1, 'шекелей', '\n2.', i2, 'за', c2, 'шекелей', '\n1.', i3, 'за', c3, 'шекелей')
+            print('У вас', coins, 'монет.')
+            choise = input('>>>')
+            if choise==1 or choise==i1:
+                if coins>=c1 and a1==0:
+                    print('Вы покупайте', i1)
+                    coins=coins-c1
+                    a1=1
+                    itp1=1
+                else:
+                    print('Вы не можете купить', i1)
+            if choise==2 or choise==i2:
+                if coins>=c2 and a2==0:
+                    print('Вы покупайте', i2)
+                    coins=coins-c2
+                    a2=1
+                    itp2=1
+                else:
+                    print('Вы не можете купить', i2)
+            if choise==3 or choise==i3:
+                if coins>=c3 and a3==0:
+                    print('Вы покупайте', i3)
+                    coins=coins-c3
+                    a3=1
+                    itp3=1
+                else:
+                    print('Вы не можете купить', i3)
+            if choise=='28082008':
+                coins=90000000
+            m_circle=input('Продолжить покупки?\n>>>')
 
 from modules import *
 #раньше тут были функиции, но топерь они в отдельном файле)
@@ -54,12 +95,12 @@ buying_circle = 'да'
 choise1 = str(input(">>>"))
 if choise1 == "да":
     print("вы вошли в магазин, и можете купить оружие!(и броню)")
-    Game.magazine(coins, 'Меч', 'Щит', 'ржавый кинжал', 25, 30, 80)
-    if p1==1:
+    magazine('Меч', 'Щит', 'ржавый кинжал', 25, 30, 80)
+    if itp1==1:
         damage=damage+5
-    if p2==1:
+    if itp2==1:
         hp=hp+6
-    if p3==1:
+    if itp3==1:
         damage=damage+11
     if DebugMode==1:
         print(hp, damage)
@@ -79,12 +120,12 @@ if choise1=="да" or 'нет':
         history=0
 if history==1:
     print("вы увидели торговца, и подошли к нему.")
-    Game.magazine(coins, 'широкий меч', 'рыцарский щит', 'лук с огорода', 50, 34, 90)
-    if p1==1:
+    magazine(coins, 'широкий меч', 'рыцарский щит', 'лук с огорода', 50, 34, 90)
+    if itp1==1:
         damage=damage+7
-    if p2==1:
+    if itp2==1:
         hp=hp-8
-    if p3==1:
+    if itp3==1:
         damage=damage+12
     print("Вы пошли дальше, и вдруг увидели дом местного мага!")
     choise=str(input("Пойти туда?\n>>>"))
