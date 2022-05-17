@@ -76,6 +76,7 @@ class Game():
             win=1
             print('Победа!!!')
         t.sleep(0.5)
+        global win
     def battlebig(hp, damage, ehp, edamage):
         start_hp=hp
         global win
