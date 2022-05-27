@@ -70,7 +70,6 @@ class Game():
                 elif luck2<=40:
                     print('враг промахнулся')
                     t.sleep(0.3)
-        global win
         if hp<=0:
             win=0
             print('вы проиграли!!!')
@@ -78,7 +77,6 @@ class Game():
             win=1
             print('Победа!!!')
         t.sleep(0.5)
-        global win
     def battlebig(hp, damage, ehp, edamage):
         start_hp=hp
         global win, ghp
