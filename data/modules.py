@@ -39,7 +39,8 @@ class Game():
                 elif choise=="нет":
                     print("♂fuck you♂")
         elif choise=="нет":
-            print("♂fuck you♂") 
+            print("♂fuck you♂")
+            torg=0
     def battle(hp, damage, ehp, edamage):
         global win
         start_hp=hp
