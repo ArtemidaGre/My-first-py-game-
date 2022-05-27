@@ -43,6 +43,7 @@ choise1 = str(input("Начать бой? (да или нет)\n>>>"))
 
 
 
+from time import sleep
 from modules import *
 def magazine(i1, i2, i3, c1, c2, c3):
         a1=a2=a3=0
@@ -368,7 +369,7 @@ if choise=='да':
         t.sleep(3)
         print('Вы', num_stage1)
         num_stage1=num_stage1-1
-    print('Вы стоите у окна приема клиентов, что вы хотите сделать\nвзять кредит\nположить на счет')
+    print('Вы стоите у окна приема клиентов, что вы хотите сделать\n1.взять кредит\n2.положить на счет')
     choise=str(input('>>>'))
     if choise=='кредит' or '1':
         creditm=int(input('на сколько шекелей взять кредит?\n>>>'))
@@ -502,7 +503,10 @@ while True:
                     print('НЕОЖИДАННО ПЕРЕД ВАМИ ПОЯВИЛСЯ МОНСТР!')
                     Game.battle(hp, damage, 100, 15)
                     if win==1:
-                        print('Вы одолели его, и забрали все что у него было (жену и детей в том числе)')
+                        print('Вы одолели его, и забрали все что у него было (жену и детей в том числе)\nP.S. это было жестоко...')
+                        wife_m=1
+                        mini_m=1
+                        coins=coins+100
                     elif win==0:
                         print('Хоть вы и проиграли, но монстр простил вас и выпустил из погреба')
                         hp=hp-5
@@ -552,12 +556,19 @@ print('тк это финал симулятора консолького кве
 
 Game.battle(hp, damage, 5, 1)
 print('Вы его победили)))\nО нет, сюда пришли его помочники!!\nОни хотят забрать вашу 5 точку в их ♂dungeon♂!!!')
+sleep(4)
 Game.battlebig(hp, damage, 28, 4)
+hp-=5
 Game.battlebig(hp, damage, 42, 7)
+hp-=7
 Game.battlebig(hp, damage, 60, 5)
+hp-=9
 Game.battlebig(hp, damage, 20, 5)
+hp-=2
 Game.battlebig(hp, damage, 3, 15)
+hp-=1
 Game.battlebig(hp, damage, 15, 2)
+hp-=2
 Game.battlebig(hp, damage, 10, 5)
 if win==1:
     print('Вы победили их, а вот что было дальше вы увидите в симуляторе консолького квеса 2')

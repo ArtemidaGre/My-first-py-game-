@@ -79,7 +79,7 @@ class Game():
         t.sleep(0.5)
     def battlebig(hp, damage, ehp, edamage):
         start_hp=hp
-        global win, ghp
+        global win
         import time as t
         print('Бой начинается!')
         print('у вас', hp, 'hp, и', damage, 'урона\nу врага', ehp, 'hp, и', edamage, 'урона')
