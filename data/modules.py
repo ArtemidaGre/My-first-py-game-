@@ -41,6 +41,7 @@ class Game():
         elif choise=="нет":
             print("♂fuck you♂") 
     def battle(hp, damage, ehp, edamage):
+        global win
         start_hp=hp
         import time as t
         print('Бой начинается!')
@@ -79,7 +80,7 @@ class Game():
         global win
     def battlebig(hp, damage, ehp, edamage):
         start_hp=hp
-        global win
+        global win, ghp
         import time as t
         print('Бой начинается!')
         print('у вас', hp, 'hp, и', damage, 'урона\nу врага', ehp, 'hp, и', edamage, 'урона')
@@ -166,13 +167,8 @@ class subfunc():
             while wait1<=10:
                 print('...', end='')
                 t.sleep(1)
-            print('82467139')
+            print('\n82467139')
         if to_decode==true_2:
-            while wait1<=10:
-                print('...', end='')
-                t.sleep(1)
-            print('ну очень крутая хрень которую можно взять')
-        else:
             while wait1<=10:
                 print('...', end='')
                 t.sleep(1)
