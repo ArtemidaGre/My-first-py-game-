@@ -2,6 +2,9 @@
 
 
 import time as t
+from tokenize import Name
+from unicodedata import name
+
 
 
 def fight_n(hp, damage, ehp, edamage):
@@ -40,4 +43,10 @@ def fight_n(hp, damage, ehp, edamage):
 
 fight_n(int(input('hp=')), int(input('damage=')), int(input('ehp=')), int(input('edamage=')))
 t.sleep(10)
+
+name='Амогус'
+historylist=['amogus', 'gus', 'amo', 17]
+fin=str(input('введите что нибудь, для завершения игры.\n'))
+final=open('final.txt', 'a')
+final.write(name, historylist)
 

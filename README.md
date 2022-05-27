@@ -1,4 +1,4 @@
-# My-first-py-game-
+# симулятор квеста 1
 this is my first game, that i create)
 if you find bug or game crash, find and say about
 my contacts:
@@ -7,3 +7,5 @@ my contacts:
 3.email ArtaWWodGameSup@mail.ru
 -
 Have a good game!)
+
+autor:Artemida_gre or ArtaWWod (in some games KoroZZia)

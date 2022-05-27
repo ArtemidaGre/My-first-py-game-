@@ -249,7 +249,7 @@ if history==1:
     if choise=="да":
         print("как только вы вошли, на вас напала собака, которая не ела 3дня...")
         hp=hp-15
-        damadge=damage-5
+        damage=damage-5
         print('Вы сбежали из дома с оторванным гузном...')
     elif choise=='нет':
         print('Вы вспомнили про свою собаку, и ушли.')
@@ -614,11 +614,11 @@ while True:
                 print('Вы не смогли открыть дверь.')
     elif choise==4:
         print('Вы решили зайти в подвал и увидели 5 злых детей!')
-        battlebig(hp, damadge, 15, 10)
-        battlebig(hp, damadge, 20, 5)
-        battlebig(hp, damadge, 10, 12)
-        battlebig(hp, damadge, 50, 2)
-        battlebig(hp, damadge, 5, 5)
+        battlebig(hp, damage, 15, 10)
+        battlebig(hp, damage, 20, 5)
+        battlebig(hp, damage, 10, 12)
+        battlebig(hp, damage, 50, 2)
+        battlebig(hp, damage, 5, 5)
     elif choise==5:
         break
 
